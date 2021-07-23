@@ -1,0 +1,68 @@
+.app-header {
+    background: url('../img/bg_header.png'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 1fr;
+    
+}
+
+.nav-logo {
+    margin-right: 50px;
+}
+
+.nav-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    
+
+    &__link {
+        padding: 5px;
+        @include font('gothambook', 400, 14px, null, $white, uppercase);
+
+        &::before {
+            content: url('../img/Ellipse1.png');
+            margin: 0 10px;
+        }
+
+        &:hover::before {
+            content: url('../img/Ellipse_fill.png');
+        }
+    }
+}
+
+.nav-social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-left: 30px;
+
+    &__item {
+        border: 1px solid $violet;
+        padding: 10px;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        
+
+        &:hover {
+            background: $white;
+            color: $violet;
+        }
+
+    }
+    
+    &__link {
+        color: $white;
+        font-size: 16px;
+    }
+}
