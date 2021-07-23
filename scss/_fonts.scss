@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'gothambold';
+    src: url('../fonts/gothambold-webfont.eot');
+    src: url('../fonts/gothambold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothambold-webfont.woff2') format('woff2'),
+         url('../fonts/gothambold-webfont.woff') format('woff'),
+         url('../fonts/gothambold-webfont.svg#gothambold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gothambook';
+    src: url('../fonts/gothambook-webfont.eot');
+    src: url('../fonts/gothambook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothambook-webfont.woff2') format('woff2'),
+         url('../fonts/gothambook-webfont.woff') format('woff'),
+         url('../fonts/gothambook-webfont.svg#gothambook') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/open-sans.regular-webfont.eot');
+    src: url('../fonts/open-sans.regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans.regular-webfont.woff2') format('woff2'),
+         url('../fonts/open-sans.regular-webfont.woff') format('woff'),
+         url('../fonts/open-sans.regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
