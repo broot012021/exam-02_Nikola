@@ -1,0 +1,109 @@
+.news {
+    background: url('../img/news/news_bg.png'), no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 1320px) {
+            align-items: center;
+        }
+    }
+}
+
+.news-title {
+    color: $white;
+
+    &::before {
+        background: $white;
+    }
+}
+
+.news-slider {
+
+    @media screen and (max-width: 1320px) {
+        width: 70%;
+    }
+}
+
+.article {
+    width: fit-content;
+    background: $white;
+    margin: 0 10px;
+}
+
+.article-img {
+    width: 100%;
+    height: auto;
+}
+
+.article-title {
+    @include font('gothambold', 700, 22px, null, $black, uppercase);
+    line-height: 34px;
+    margin: 30px 70px 15px 20px;
+    overflow: hidden;
+    height: 60px;
+
+    @media screen and (max-width: 1320px) {
+        font-size: 18px;
+    }
+}
+
+.article-discr {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 62px;
+    @include font('open_sansregular', 400, 18px, null, $gray, null);
+    line-height: 30px;
+    margin: 0 20px 35px 20px;
+
+    @media screen and (max-width: 1320px) {
+        font-size: 14px;
+    }
+}
+
+.article-author {
+    margin: 0 20px 30px 20px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    grid-row-start: 2;
+
+    &__avatar {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        align-items: center
+    }
+
+    &__name {
+        @include font('gothambook', 400, 18px, null, $black, uppercase);
+        align-self: center;
+
+        @media screen and (max-width: 1320px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 568px) {
+            margin-left: 15px;
+        }
+    }
+
+    &__date {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        color: $blue;
+
+        @media screen and (max-width: 568px) {
+            margin-left: 15px;
+        }
+    }
+}
