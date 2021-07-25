@@ -25,3 +25,33 @@ a, a:visited {
 $white: #ffffff;
 $violet: #b29cff;
 $purple: #7f64fb;
+$black: #2c4058;
+$gray: #4b5562;
+
+.general-title {
+    @include font('gothambold', 700, 44px, null, $black, uppercase);
+    text-align: center;
+    margin: 140px 0 100px;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 2px;
+        width: 100px;
+        background: $black;
+        position: absolute;
+        top: -40px;
+        left: 46%;
+
+        @media screen and (max-width: 568px)  {
+            left: 43%;
+        }
+    }
+}
+
+.general-btn {
+    @include font('gothambook', 400, 14px, null, $black, uppercase);
+    border: 1px solid $black;
+    padding: 20px 45px;
+    background: none;
+}

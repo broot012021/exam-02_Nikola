@@ -1,5 +1,5 @@
 .app-header {
-    background: url('../img/bg_header.png'), no-repeat;
+    background: url('../img/header/bg_header.png'), no-repeat;
     background-size: cover;
     background-position: center;
     
@@ -46,12 +46,12 @@
         @include font('gothambook', 400, 14px, null, $white, uppercase);
 
         &::before {
-            content: url('../img/Ellipse1.png');
+            content: url('../img/header/Ellipse1.png');
             margin: 0 10px;
         }
 
         &:hover::before {
-            content: url('../img/Ellipse_fill.png');
+            content: url('../img/header/Ellipse_fill.png');
         }
 
         @media screen and (max-width: 960px) {
