@@ -191,15 +191,22 @@ a, a:visited {
 }
 
 .nav-btn {
+  position: fixed;
+  right: 0;
   display: none;
   border: none;
   font-size: 30px;
-  background: #5585a2;
+  background: #7f64fb;
   color: #ffffff;
   text-align: center;
-  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
   width: 42px;
   height: 42px;
+}
+
+.nav-btn:active {
+  background: #ffffff;
+  color: #b29cff;
+  transition-timing-function: 10s;
 }
 
 @media screen and (max-width: 960px) {

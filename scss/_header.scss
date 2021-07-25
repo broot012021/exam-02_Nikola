@@ -93,15 +93,22 @@
 }
 
 .nav-btn {
+    position: fixed;
+    right: 0;
     display: none;
     border: none;
     font-size: 30px;
-    background: #5585a2;
+    background: $purple;
     color: $white;
     text-align: center;
-    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.5);
     width: 42px;
     height: 42px;
+
+    &:active {
+        background: $white;
+        color: $violet;
+        transition-timing-function: 10s;
+    }
 
     @media screen and (max-width: 960px) {
         display: grid;
