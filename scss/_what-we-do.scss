@@ -1,0 +1,83 @@
+.project {
+    display: flex;
+    margin-bottom: 140px;
+
+    &--second {
+        flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 1140px) {
+        margin: 0 20px 140px;
+    }
+
+    @media screen and (max-width: 568px) {
+        flex-direction: column;
+        margin: 0 20px 40px;
+    }
+}
+
+.project__back-img {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+
+    &--second {
+        position: absolute;
+        right: 0;
+        left: auto;
+    }
+
+    @media screen and (max-width: 1140px) {
+        width: 35%;
+        height: 50%;
+    }
+
+    @media screen and (max-width: 568px) {
+        display: none;
+    }
+}
+
+.project__front-img {
+    margin-top: 70px;
+
+    @media screen and (max-width: 1140px) {
+        width: 40%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 568px)  {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.project__info {
+    margin: 130px 0 0 70px;
+
+    &-subtitle {
+        @include font('gothambook', 400, 22px, null, $black, uppercase);
+    }
+
+    &-title {
+        @include font('gothambold', 700, 44px, null, $black, uppercase);
+    }
+
+    &-discr {
+        @include font('open_sansregular', 400, 18px, null, $gray, null);
+        line-height: 30px;
+        margin: 35px 0;
+    }
+
+    &-address {
+        @include font('open_sansregular', 400, 18px, null, $black, null);
+        margin-top: 55px;
+    }
+
+    &--second {
+        margin: 130px 0;
+    }
+
+    @media screen and (max-width: 568px)  {
+        margin: 100px 0 0 0;
+    }
+}
