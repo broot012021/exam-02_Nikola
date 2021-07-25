@@ -184,4 +184,33 @@ a, a:visited {
   align-items: flex-end;
   background: #7f64fb;
 }
+
+.header-title {
+  font-family: "gothambold";
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 250px 0 30px;
+}
+
+@media screen and (max-width: 568px) {
+  .header-title {
+    font-size: 50px;
+    margin: 100px 0 30px;
+  }
+}
+
+.header-subtitle {
+  font-family: "gothambook";
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 310px;
+}
 /*# sourceMappingURL=style.css.map */
