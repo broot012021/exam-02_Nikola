@@ -9,21 +9,40 @@
     display: grid;
     grid-template-columns: 1fr 3.5fr 1fr;
     
+    @media screen and (max-width: 568px) {
+        padding: 10px 0;
+    }
 }
 
 .nav-logo {
     margin-right: 50px;
+
+    @media screen and (max-width: 960px) {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 568px) {
+        width: 145px;
+        height: auto;
+    }
 }
 
 .nav-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     align-items: center;
     justify-items: center;
     
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
+
+    &__item {
+        padding: 5px;
+        width: 100%;
+    }
 
     &__link {
-        padding: 5px;
         @include font('gothambook', 400, 14px, null, $white, uppercase);
 
         &::before {
@@ -33,6 +52,12 @@
 
         &:hover::before {
             content: url('../img/Ellipse_fill.png');
+        }
+
+        @media screen and (max-width: 960px) {
+            width: 100%;
+            display: block;
+            padding: 30px;
         }
     }
 }
@@ -65,4 +90,36 @@
         color: $white;
         font-size: 16px;
     }
+}
+
+.nav-btn {
+    display: none;
+    border: none;
+    font-size: 30px;
+    background: #5585a2;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.5);
+    width: 42px;
+    height: 42px;
+
+    @media screen and (max-width: 960px) {
+        display: grid;
+        grid-row-start: 1;
+        grid-column-start: 3;
+        justify-self: flex-end;
+    }
+}
+
+.active {
+    display: grid;
+    position: fixed;
+    right: 0;
+    top: 56px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    align-items: flex-end;
+    background: #7f64fb;
 }
