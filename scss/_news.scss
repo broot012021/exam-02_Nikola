@@ -19,7 +19,13 @@
 
     &::before {
         background: $white;
+
+        @media screen and (max-width: 1320px) {
+            width: 40%;
+            margin-left: -20%;
+        }
     }
+
 }
 
 .news-slider {
