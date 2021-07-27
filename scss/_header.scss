@@ -103,6 +103,7 @@
     text-align: center;
     width: 42px;
     height: 42px;
+    z-index: 100;
 
     &:active {
         background: $white;

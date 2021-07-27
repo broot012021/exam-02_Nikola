@@ -196,6 +196,7 @@ a, a:visited {
   text-align: center;
   width: 42px;
   height: 42px;
+  z-index: 100;
 }
 
 .nav-btn:active {
@@ -669,7 +670,7 @@ a, a:visited {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
-  gap: 40px 30px;
+  gap: 20px;
   font-family: "gothambook";
   font-weight: 400;
   font-size: 18px;
@@ -737,5 +738,90 @@ a, a:visited {
 
 .form-email {
   opacity: 0.5;
+}
+
+.footer {
+  background: url("../img/footer/footer_bg.png"), no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer-wrapper {
+  width: 50%;
+  margin: 250px 0 200px;
+}
+
+@media screen and (max-width: 960px) {
+  .footer-wrapper {
+    margin: 500px 0 100px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .footer-wrapper {
+    margin: 600px 0 60px;
+    width: 80%;
+  }
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+}
+
+@media screen and (max-width: 1320px) {
+  .footer-info {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer-info {
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+@media screen and (max-width: 720px) {
+  .footer-social {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    gap: 20px;
+  }
+}
+
+.footer-copy {
+  font-family: "gothambook";
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 40px;
+  line-height: 20px;
+}
+
+.footer-copy__name {
+  margin-right: 40px;
+  position: relative;
+}
+
+.footer-copy__name::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  right: -20px;
 }
 /*# sourceMappingURL=style.css.map */

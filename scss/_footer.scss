@@ -1,0 +1,71 @@
+.footer {
+    background: url('../img/footer/footer_bg.png'), no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-wrapper {
+    width: 50%;
+    margin: 250px 0 200px;
+
+    @media screen and (max-width: 960px) {
+        margin: 500px 0 100px;
+    }
+
+    @media screen and (max-width: 568px) {
+        margin: 600px 0 60px;
+        width: 80%;
+    } 
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+
+    @media screen and (max-width: 1320px) {
+        grid-template-columns: auto;
+    }
+
+    @media screen and (max-width: 720px) {
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        gap: 20px;
+    }
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    @media screen and (max-width: 720px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        gap: 20px;
+    }
+}
+
+.footer-copy {
+    @include font('gothambook', 400, 14px, null, $white, null);
+    margin-top: 40px;
+    line-height: 20px;
+
+    &__name {
+        margin-right: 40px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            background: $white;
+            position: absolute;
+            right: -20px;
+        }
+    }
+}
