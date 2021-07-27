@@ -20,11 +20,11 @@
                     <li class="nav-list__item">
                         <a href="#" class="nav-list__link">About us</a></li>
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link">Projects</a></li>
+                        <a href="#projects" class="nav-list__link">Projects</a></li>
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link">News</a></li>
+                        <a href="#news" class="nav-list__link">News</a></li>
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link">Contact</a></li>
+                        <a href="#contact" class="nav-list__link">Contact</a></li>
                 </ul>
                 <div class="nav-social">
                     <a href="#" class="nav-social__link">
@@ -53,7 +53,7 @@
         </div>
     </header>
     <main>
-        <section class="what-we-do">
+        <section class="what-we-do" id="projects">
             <div class="container">
                 <h2 class="general-title">
                     What we do
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="news">
+        <section class="news" id="news">
             <div class="container">
                 <h2 class="general-title news-title">
                     Latest News
@@ -288,22 +288,33 @@
                 </button>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contact">
             <div id="map"></div>
             <div class="contacts-info">
-                <h2 class="general-title">
+                <h2 class="general-title contacts-title">
                     get in touch
                 </h2>
-            </div>
-            <div class="contacts-text">
-                <address>91 Nolan Extensions Suite 670</address>
-                <a href="tel:+0013568682454">+001 356-868-2454</a>
-                <a href="malito:gahuy93@gmail.com">gahuy93@gmail.com</a>
-                <time>From 07:05AM to 19:30PM</time>
-                <form action="">
-                    <input type="text" placeholder="Mollie Medina">
-                    <input type="email" placeholder="Email">
-                </form>
+                <div class="contacts-text">
+                    <address class="contacts-text__address">
+                        <i class="fas fa-map-marker-alt contacts-icon"></i> 91 Nolan Extensions Suite 670
+                    </address>
+                    <a class="contacts-text__link" href="tel:+0013568682454">
+                        <i class="fas fa-phone-alt contacts-icon"></i> +001 356-868-2454
+                    </a>
+                    <a class="contacts-text__link" href="malito:gahuy93@gmail.com">
+                        <i class="fas fa-inbox contacts-icon"></i> gahuy93@gmail.com
+                    </a>
+                    <time>
+                        <i class="far fa-clock contacts-icon"></i> From 07:05AM to 19:30PM
+                    </time>
+                    <form class="contacts-text__form" action="">
+                        <input class="form-name" type="text" placeholder="Mollie Medina">
+                        <input class="form-email" type="email" placeholder="Email">
+                        <button class="general-btn">
+                            Submit
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

@@ -627,13 +627,115 @@ a, a:visited {
   }
 }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 #map {
   height: 700px;
   width: 100%;
 }
 
+.contacts-info {
+  width: 50%;
+  position: absolute;
+  bottom: -30%;
+  background: #ffffff;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 960px) {
+  .contacts-info {
+    width: 80%;
+    bottom: -70%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .contacts-info {
+    width: 95%;
+    bottom: -80%;
+  }
+}
+
+.contacts-title {
+  margin: 90px 0 60px;
+}
+
 .contacts-text {
   display: grid;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 40px 30px;
+  font-family: "gothambook";
+  font-weight: 400;
+  font-size: 18px;
+  color: #2c4058;
+  line-height: 34px;
+  margin: 0 60px;
+}
+
+@media screen and (max-width: 960px) {
+  .contacts-text {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+.contacts-text__link {
+  color: #2c4058;
+}
+
+.contacts-text__address {
+  font-style: inherit;
+}
+
+.contacts-icon {
+  color: #7e5aff;
+}
+
+.contacts-text__form {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-text__form .general-btn {
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 960px) {
+  .contacts-text__form {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+.form-name, .form-email {
+  font-family: "gothambook";
+  font-weight: 400;
+  font-size: 18px;
+  color: #2c4058;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #2c4058;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.form-name:focus, .form-email:focus {
+  opacity: 1;
+}
+
+.form-email {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */

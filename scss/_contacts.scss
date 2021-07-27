@@ -1,9 +1,98 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 #map {
     height: 700px;
     width: 100%;
   }
 
+  .contacts-info {
+    width: 50%;
+    position: absolute;
+    bottom: -30%;
+    background: $white;
+    padding-bottom: 80px;
+
+    @media screen and (max-width: 960px) {
+        width: 80%;
+        bottom: -70%;
+    }
+
+    @media screen and (max-width: 568px) {
+        width: 95%;
+        bottom: -80%;
+    }
+  }
+
+  .contacts-title {
+      margin: 90px 0 60px;
+  }
+
   .contacts-text {
       display: grid;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 40px 30px;
+      @include font('gothambook', 400, 18px, null, $black, null);
+      line-height: 34px;
+      margin: 0 60px;
+
+      @media screen and (max-width: 960px) {
+        grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      }
+
+      &__link {
+          color: $black;
+      }
+
+      &__address {
+          font-style: inherit;
+      }
+  }
+
+  .contacts-icon {
+      color: $contact-icon;
+  }
+
+  .contacts-text__form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+    display: flex;
+    flex-direction: column;
+    
+    .general-btn {
+        align-self: flex-end;
+    }
+    
+    @media screen and (max-width: 960px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+  }
+
+  .form-name, .form-email {
+    @include font('gothambook', 400, 18px, null, $black, null);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $black;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+
+    &:focus {
+        opacity: 1;
+    }
+  }
+
+  .form-email {
+      opacity: 0.5;
   }
