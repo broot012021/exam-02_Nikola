@@ -80,7 +80,7 @@ a, a:visited {
   background: none;
 }
 
-.app-header {
+.header {
   background: url("../img/header/bg_header.png"), no-repeat;
   background-size: cover;
   background-position: center;
@@ -255,6 +255,10 @@ a, a:visited {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 310px;
+}
+
+.what-we-do {
+  display: flex;
 }
 
 .project {

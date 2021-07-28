@@ -11,20 +11,20 @@
 </head>
 <body>
 <div class="app">
-    <header class="app-header">
+    <header class="header">
         <div class="container">
             <nav class="nav">
                 <img src="./img/header/Logo.png" alt="logo" class="nav-logo">
                 <button id="menu" class="nav-btn">&#9776;</button>
                 <ul id="nav" class="nav-list">
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link">About us</a></li>
+                        <a data-goto=".header" href="#" class="nav-list__link">About us</a></li>
                     <li class="nav-list__item">
-                        <a href="#projects" class="nav-list__link">Projects</a></li>
+                        <a data-goto=".what-we-do" href="#" class="nav-list__link">Projects</a></li>
                     <li class="nav-list__item">
-                        <a href="#news" class="nav-list__link">News</a></li>
+                        <a data-goto=".news" href="#" class="nav-list__link">News</a></li>
                     <li class="nav-list__item">
-                        <a href="#contact" class="nav-list__link">Contact</a></li>
+                        <a data-goto=".contacts" href="#" class="nav-list__link">Contact</a></li>
                 </ul>
                 <div class="nav-social">
                     <a href="#" class="nav-social__link">
@@ -53,7 +53,7 @@
         </div>
     </header>
     <main>
-        <section class="what-we-do" id="projects">
+        <section class="what-we-do">
             <div class="container">
                 <h2 class="general-title">
                     What we do
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="news" id="news">
+        <section class="news">
             <div class="container">
                 <h2 class="general-title news-title">
                     Latest News
@@ -288,7 +288,7 @@
                 </button>
             </div>
         </section>
-        <section class="contacts" id="contact">
+        <section class="contacts">
             <div id="map"></div>
             <div class="contacts-info">
                 <h2 class="general-title contacts-title">

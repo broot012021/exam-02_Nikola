@@ -45,4 +45,24 @@ function initMap() {
   });
 }
 
+// Прокрутка при клике
+
+const menuLinks = document.querySelectorAll('.nav-list__link[data-goto]');
+
+menuLinks.forEach(menuLink => {
+  menuLink.addEventListener('click', menuLinkClick);
+});
+
+function menuLinkClick(e) {
+  const menuLink = e.target;
+  const gotoBlock = document.querySelector(menuLink.dataset.goto);
+  const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+
+  window.scrollTo({
+    top: gotoBlockValue,
+    behavior: 'smooth'
+  });
+  e.preventDefault();
+}
+
   
