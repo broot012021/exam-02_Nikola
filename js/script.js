@@ -1,8 +1,10 @@
 const burgerBtn = document.querySelector('#menu');
 const nav = document.querySelector('#nav');
+const app = document.querySelector('body');
 
 burgerBtn.addEventListener('click', () => {
     nav.classList.toggle('active');
+    app.classList.toggle('lock');
 } );
 
 $(document).ready(function(){
@@ -57,6 +59,9 @@ function menuLinkClick(e) {
   const menuLink = e.target;
   const gotoBlock = document.querySelector(menuLink.dataset.goto);
   const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+
+  nav.classList.remove('active');
+  app.classList.remove('lock');
 
   window.scrollTo({
     top: gotoBlockValue,
